@@ -1,0 +1,17 @@
+def min_operations_to_match(char1, char2):
+    
+    ord1 = ord(char1)
+    ord2 = ord(char2)
+    
+   
+    forward_distance = abs(ord1 - ord2)
+    
+    backward_distance = 26 - forward_distance
+    
+    return min(forward_distance, backward_distance)
+
+char1, char2 = input().split()
+
+
+result = min_operations_to_match(char1, char2)
+print(result)
